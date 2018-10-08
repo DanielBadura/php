@@ -1,2 +1,2 @@
 #!/bin/sh
-php-fpm7.2 --nodaemonize 2>&1
+php-fpm7.0 --nodaemonize 2>&1
