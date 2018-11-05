@@ -34,6 +34,7 @@ RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
         php7.0-apcu \
         php7.0-gd \
         php7.0-soap \
+        php7.0-xdebug \
         && \
     rm -r /var/lib/apt/lists/*
 
