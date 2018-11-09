@@ -18,23 +18,23 @@ RUN apt-get update && \
 RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
-        php7.2 \
-        php7.2-fpm \
-        php7.2-cli \
-        php7.2-intl \
-        php7.2-pdo \
-        php7.2-zip \
-        php7.2-xml \
-        php7.2-mbstring \
-        php7.2-json \
-        php7.2-curl \
-        php7.2-pdo \
-        php7.2-mysql \
-        php7.2-opcache \
-        php7.2-apcu \
-        php7.2-gd \
-        php7.2-soap \
-        php7.2-xdebug \
+        php7.1 \
+        php7.1-fpm \
+        php7.1-cli \
+        php7.1-intl \
+        php7.1-pdo \
+        php7.1-zip \
+        php7.1-xml \
+        php7.1-mbstring \
+        php7.1-json \
+        php7.1-curl \
+        php7.1-pdo \
+        php7.1-mysql \
+        php7.1-opcache \
+        php7.1-apcu \
+        php7.1-gd \
+        php7.1-soap \
+        php7.1-xdebug \
         && \
     rm -r /var/lib/apt/lists/*
 
@@ -51,7 +51,7 @@ COPY docker/php-fpm.sh /etc/service/php-fpm/run
 RUN chmod +x /etc/service/php-fpm/run
 
 RUN mkdir /run/php
-COPY docker/fpm-www.conf /etc/php/7.2/fpm/pool.d/www.conf
+COPY docker/fpm-www.conf /etc/php/7.1/fpm/pool.d/www.conf
 
 # setup nginx
 RUN mkdir /etc/service/nginx
