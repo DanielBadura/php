@@ -9,6 +9,7 @@ RUN echo Europe/Berlin > /etc/container_environment/TZ
 # install common tools & tzdata
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
+ 	wget \
         software-properties-common \
         tzdata \
         && \
